@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Text is changed from the feature branch
         </a>
       </header>
     </div>
