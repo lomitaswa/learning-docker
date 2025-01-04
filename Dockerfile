@@ -1,4 +1,4 @@
-FROM node:20-alpine AS build_phase
+FROM node:lts-alpine AS build_phase
 
 WORKDIR /app
 
@@ -11,5 +11,5 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-
+EXPOSE 80
 COPY --from=build_phase /app/build /usr/share/nginx/html
