@@ -1,13 +1,8 @@
 FROM node:lts-alpine AS build_phase
-
-WORKDIR /app
-
+WORKDIR '/app'
 COPY package.json .
-
 RUN npm install
-
 COPY . .
-
 RUN npm run build
 
 FROM nginx
