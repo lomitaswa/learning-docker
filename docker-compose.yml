@@ -1,0 +1,7 @@
+services:
+  web-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "80:80"
